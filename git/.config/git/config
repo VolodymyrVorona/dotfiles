@@ -1,0 +1,24 @@
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /home/voron/.config/git/gitignore_global
+	editor = nvim
+[commit]
+	template = /home/voron/.config/git/commit_template
+[push]
+	autoSetupRemote = true
+[alias]
+	st = status
+	br = branch
+	sw = switch
+	swc = switch --create
+	wta = worktree add
+	wtr = worktree remove
+[user]
+	email = volodymyr.voronn87@gmail.com
+	name = Volodymyr Vorona
+
+[includeIf "gitdir:/home/voron/projects/work/"]
+    path = /home/voron/projects/work/.gitconfig
+[rerere]
+	enabled = true
