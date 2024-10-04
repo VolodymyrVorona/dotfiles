@@ -15,7 +15,7 @@
 	wta = worktree add
 	wtr = worktree remove
 [user]
-	email = volodymyr.voronn87@gmail.com
+	email = volodymyr.voron87@gmail.com
 	name = Volodymyr Vorona
 
 [includeIf "gitdir:/home/voron/projects/work/"]
