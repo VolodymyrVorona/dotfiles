@@ -20,7 +20,5 @@
 
 [includeIf "gitdir:/home/voron/projects/work/"]
     path = /home/voron/projects/work/.gitconfig
-[includeIf "gitdir:/home/voron/dotfiles/"]
-    path = /home/voron/dotfiles/.gitconfig
 [rerere]
 	enabled = true
