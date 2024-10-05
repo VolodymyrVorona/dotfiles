@@ -13,6 +13,8 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.blade" },
+
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   { import = "astrocommunity.search.grug-far-nvim" },
 
