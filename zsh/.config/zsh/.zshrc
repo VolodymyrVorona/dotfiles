@@ -27,6 +27,10 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [[ -d "$HOME/.config/composer/vendor/bin" ]]; then
+  then PATH="$HOME/.config/composer/vendor/bin:$PATH"
+fi
+
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
