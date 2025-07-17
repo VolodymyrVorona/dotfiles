@@ -3,8 +3,10 @@
 [core]
 	excludesfile = /home/voron/.config/git/gitignore_global
 	editor = nvim
+	autocrlf = input
 [commit]
 	template = /home/voron/.config/git/commit_template
+	verbose = true
 [push]
 	autoSetupRemote = true
 [alias]
@@ -22,3 +24,9 @@
     path = /home/voron/projects/work/.gitconfig
 [rerere]
 	enabled = true
+	autoupdate = true
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+[merge]
+	conflictstyle = zdiff3
