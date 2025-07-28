@@ -17,8 +17,7 @@ fi
 # Variables
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export MANPAGER="nvim +Man!"
-export $(envsubst < "$ZDOTDIR/.env")
-export PATH="/opt/warden/bin:$PATH"
+export "$(envsubst < "$ZDOTDIR/.env")"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -86,8 +85,6 @@ alias lt="la -T --level=3"
 alias ld="ls -lD --icons=always"
 alias lf="ls -lf --color=always --icons | grep -v /"
 alias lh="ls -dl .* --group-directories-first --icons=always"
-
-alias rm="trash-put"
 
 alias lvim='NVIM_APPNAME="lazyvim" nvim'
 alias avim='NVIM_APPNAME="astronvim" nvim'
