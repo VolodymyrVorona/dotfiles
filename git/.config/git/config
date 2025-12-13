@@ -4,6 +4,7 @@
 	excludesfile = /home/voron/.config/git/gitignore_global
 	editor = nvim
 	autocrlf = input
+	pager = delta
 [commit]
 	template = /home/voron/.config/git/commit_template
 	verbose = true
@@ -29,4 +30,8 @@
 	algorithm = histogram
 	colorMoved = plain
 [merge]
-	conflictstyle = zdiff3
+	conflictStyle = zdiff3
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
