@@ -10,20 +10,30 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
-	mkdir -p "$(dirname $ZINIT_HOME)"
+	mkdir -p "$(dirname "$ZINIT_HOME")"
 	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 # Variables
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export MANPAGER="nvim +Man!"
-export "$(envsubst < "$ZDOTDIR/.env")"
+export EDITOR=nvim
+export VISUAL=nvim
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export DBCLI_MYSQL="/usr/bin/mariadb"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$HOME/go/bin" ] ;
+  then PATH="$HOME/go/bin:$PATH"
 fi
 
 if [[ -d "$HOME/.config/composer/vendor/bin" ]];
@@ -60,8 +70,7 @@ bindkey '^n' history-search-forward
 # History
 HISTSIZE=5000
 HISTFILE="${ZDOTDIR:-${HOME}}/.zsh_history"
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
+
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -88,6 +97,7 @@ alias lh="ls -dl .* --group-directories-first --icons=always"
 
 alias lvim='NVIM_APPNAME="lazyvim" nvim'
 alias avim='NVIM_APPNAME="astronvim" nvim'
+alias lzd="lazydocker"
 
 # Shell integrations
 eval "$(fzf --zsh)"
