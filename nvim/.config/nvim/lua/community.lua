@@ -8,15 +8,20 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.php" },
+  -- import/override with your plugins folder
+
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.eslint" },
+  { import = "astrocommunity.pack.prettier" },
+  { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.blade" },
+  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.full-dadbod" },
+  { import = "astrocommunity.pack.laravel" },
 
-  { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.git.neogit" },
+
   { import = "astrocommunity.search.grug-far-nvim" },
-
-  -- import/override with your plugins folder
 }
