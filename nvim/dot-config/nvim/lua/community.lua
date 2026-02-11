@@ -22,6 +22,7 @@ return {
 
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.git.codediff-nvim" },
 
   { import = "astrocommunity.search.grug-far-nvim" },
 }
