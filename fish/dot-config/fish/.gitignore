@@ -1,0 +1,7 @@
+functions/fisher.fish
+functions/fish_mode_prompt.fish
+functions/fish_prompt.fish
+functions/tide/
+functions/tide.fish
+functions/_tide_*.fish
+themes/
