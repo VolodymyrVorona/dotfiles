@@ -20,6 +20,8 @@ return {
   { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.laravel" },
 
+  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
+
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.git.codediff-nvim" },
